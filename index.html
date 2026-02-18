@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Textology</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Textology 🌿</h1>
+    <p>Your cozy texting decision helper</p>
+</header>
+
+<main>
+
+    <section id="moodStage">
+        <h2>Pick your vibe</h2>
+
+        <button onclick="chooseMood('excited')">
+            Manifesting wedding bells already 💍
+        </button>
+
+        <button onclick="chooseMood('bored')">
+            Just bored and curious 🌱
+        </button>
+
+        <button onclick="chooseMood('confused')">
+            I genuinely don’t even know anymore 😵‍💫
+        </button>
+
+        <button onclick="chooseMood('sad')">
+            Missing him a little too much 🥲
+        </button>
+
+        <button onclick="chooseMood('frustrated')">
+            Ready to throw hands honestly 😤
+        </button>
+    </section>
+
+    <div id="prosModal" class="modal hidden">
+        <div class="modalContent">
+            <h2>Pros 🌸</h2>
+            <textarea id="pros" placeholder="One pro per line"></textarea>
+            <br>
+            <button onclick="showCons()">Next →</button>
+        </div>
+    </div>
+
+    <div id="consModal" class="modal hidden">
+        <div class="modalContent">
+            <h2>Cons 🍂</h2>
+            <textarea id="cons" placeholder="One con per line"></textarea>
+            <br>
+            <button onclick="decide()">See Result</button>
+        </div>
+    </div>
+
+    <div id="resultModal" class="modal hidden">
+        <div class="modalContent">
+            <h2>Your Answer ✨</h2>
+            <div id="result"></div>
+            <br>
+            <button onclick="location.reload()">Start Again</button>
+        </div>
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
